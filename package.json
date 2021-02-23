@@ -1,0 +1,11 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "A Homepage that Displays the Weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Vandegrift",
+  "license": "Apache-2.0"
+}
