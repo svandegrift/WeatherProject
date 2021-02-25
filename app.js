@@ -11,10 +11,16 @@ app.get('/', function (req, res){
             console.log(weatherData);
             var temp = weatherData.main.temp;
             var status = weatherData.weather[0].main;
+            var icon = weatherData.weather[0].icon;
+            imageURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
             console.log(`The temperature is currently ${temp} and it is ${status}`);
+            res.write('<head><meta charset="utf-8"></head>');
+            res.write(`<h1>The current weather is ${status}</h1>`);
+            res.write(`<img src="${imageURL}" />`);
+            res.write(`<h2>The current temperature is ${temp}F</h2>`);
+            res.send();            
         })
-    })
-    res.send("Server is up and running");
+    })    
 });
 
 
